@@ -1,0 +1,318 @@
+/* ===== CSS Variables ===== */
+:root {
+  /* Brand Colors */
+  --brand-1: #5b9df9;
+  --brand-2: #6bd1c9;
+  
+  /* Text Colors */
+  --ink-1: #0f172a;
+  --ink-2: #334155;
+  --ink-3: #64748b;
+  
+  /* Background Colors */
+  --surface: #f8fafc;
+  --card: #ffffff;
+  
+  /* Layout */
+  --radius: 16px;
+  --shadow: 0 6px 18px rgba(2, 8, 23, 0.08);
+  --max-width: 1100px;
+}
+
+/* ===== Base Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP", sans-serif;
+  color: var(--ink-2);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  background: #fff;
+}
+
+/* ===== Layout Components ===== */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ===== Header Styles ===== */
+.site-header {
+  padding: 12px 0;
+}
+
+.logo {
+  font-size: 18px;
+  color: var(--ink-3);
+  margin: 12px 0;
+  text-align: center;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg, rgba(91, 157, 249, 0.22), rgba(107, 209, 201, 0.22));
+  border-bottom: 1px solid #e5edf7;
+  text-align: center;
+}
+
+.hero .container {
+  padding: 96px 24px 72px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero h2 {
+  margin: 0 0 16px;
+  color: var(--ink-1);
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.hero p {
+  font-size: clamp(15px, 2.2vw, 18px);
+  margin: 0 auto;
+  max-width: 760px;
+  opacity: 0.95;
+}
+
+.hero-cta {
+  margin-top: 20px;
+}
+
+/* ===== Button Styles ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(2, 8, 23, 0.15);
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  text-align: center;
+  font-size: clamp(24px, 3vw, 32px);
+  color: var(--ink-1);
+  margin: 50px 0 24px;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+  border-radius: 2px;
+}
+
+/* ===== Appeal Section ===== */
+#appeal {
+  background: var(--surface);
+  padding: 36px 0;
+}
+
+.appeal-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+}
+
+.appeal-item {
+  background: var(--card);
+  border: 1px solid #e6ebf2;
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appeal-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(2, 8, 23, 0.12);
+}
+
+.appeal-item h3 {
+  margin: 6px 0 12px;
+  font-size: 18px;
+  color: var(--ink-1);
+  text-align: center;
+}
+
+.appeal-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===== Details Section ===== */
+#details {
+  padding: 40px 0 64px;
+}
+
+.details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.details h3 {
+  margin: 18px 0 8px;
+  font-size: 18px;
+  color: var(--ink-1);
+  font-weight: 700;
+}
+
+.details ul {
+  margin: 0 0 12px 20px;
+  padding-left: 0;
+}
+
+.details li {
+  margin-bottom: 8px;
+}
+
+/* ===== Apply CTA Section ===== */
+.apply-cta {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 48px;
+  padding: 0 24px;
+}
+
+/* ===== Entry Form Section ===== */
+#entry {
+  padding: 40px 0;
+  background: var(--surface);
+}
+
+.entry-form {
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.entry-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: var(--ink-1);
+}
+
+.entry-form input,
+.entry-form textarea,
+.entry-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #dbe3ee;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry-form input:focus,
+.entry-form textarea:focus,
+.entry-form select:focus {
+  outline: none;
+  border-color: var(--brand-1);
+  box-shadow: 0 0 0 3px rgba(91, 157, 249, 0.1);
+}
+
+.entry-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.required {
+  color: #ef4444;
+  font-size: 12px;
+  margin-left: 0.25rem;
+  font-weight: 600;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.form-note {
+  font-size: 13px;
+  color: var(--ink-3);
+  margin: 0;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero .container {
+    padding: 64px 16px 48px;
+  }
+  
+  .appeal-items {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+  
+  .details {
+    padding: 0 16px;
+  }
+  
+  .entry-form {
+    margin: 0 16px;
+  }
+}
