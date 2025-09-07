@@ -223,6 +223,275 @@ body {
   text-align: center;
 }
 
+/* ===== Philosophy Section ===== */
+#philosophy {
+  padding: 60px 0;
+  background: 
+    linear-gradient(135deg, rgba(91, 157, 249, 0.05), rgba(107, 209, 201, 0.05)),
+    #ffffff;
+  position: relative;
+}
+
+#philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.03;
+  z-index: 1;
+}
+
+.philosophy-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.philosophy-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 20px 0;
+  color: var(--ink-2);
+}
+
+.philosophy-lead {
+  font-size: 24px !important;
+  font-weight: 700;
+  color: var(--ink-1) !important;
+  margin-bottom: 16px !important;
+}
+
+.philosophy-highlight {
+  font-size: 19px !important;
+  font-weight: 600;
+  color: var(--ink-1) !important;
+  margin: 24px 0 !important;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(91, 157, 249, 0.08), rgba(107, 209, 201, 0.08));
+  border-radius: 8px;
+  border-left: 3px solid var(--brand-1);
+}
+
+.philosophy-vision {
+  font-size: 20px !important;
+  margin: 32px 0 !important;
+  color: var(--ink-1) !important;
+}
+
+.restful-text {
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.philosophy-pillars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pillar {
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(91, 157, 249, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 157, 249, 0.4);
+}
+
+.pillar-separator {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--brand-1);
+  margin: 0 8px;
+}
+
+.philosophy-call {
+  font-size: 20px !important;
+  font-weight: 600;
+  color: var(--ink-1) !important;
+  margin-top: 32px !important;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(91, 157, 249, 0.1), rgba(107, 209, 201, 0.1));
+  border-radius: 12px;
+  border-left: 4px solid var(--brand-1);
+}
+
+/* Responsive adjustments for philosophy section */
+@media (max-width: 768px) {
+  .philosophy-content {
+    padding: 24px 16px;
+    margin: 0 16px;
+  }
+  
+  .philosophy-text p {
+    font-size: 16px;
+  }
+  
+  .philosophy-lead {
+    font-size: 20px !important;
+  }
+  
+  .philosophy-vision {
+    font-size: 18px !important;
+  }
+  
+  .restful-text {
+    font-size: 24px;
+  }
+  
+  .pillar {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .philosophy-highlight {
+    font-size: 17px !important;
+    padding: 12px 16px;
+  }
+  
+  .philosophy-call {
+    font-size: 18px !important;
+  }
+}
+
+/* ===== Recruitment Process Section ===== */
+#process {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9)),
+              url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.process-steps {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.process-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--brand-1), var(--brand-2));
+  z-index: 1;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(91, 157, 249, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.step-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.step-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink-1);
+  margin-bottom: 12px;
+}
+
+.step-content p {
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #process {
+    padding: 60px 0;
+  }
+  
+  .process-step {
+    margin-bottom: 32px;
+  }
+  
+  .process-step:not(:last-child)::after {
+    left: 25px;
+    top: 50px;
+    height: 32px;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 16px;
+  }
+  
+  .step-content {
+    padding: 20px;
+  }
+  
+  .step-content h3 {
+    font-size: 18px;
+  }
+  
+  .step-content p {
+    font-size: 15px;
+  }
+}
+
 /* ===== Details Section ===== */
 #details {
   padding: 40px 0 64px;
